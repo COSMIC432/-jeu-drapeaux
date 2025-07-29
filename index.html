@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlagMaster Arena</title>
+  <title>FlagMaster Arena PRO</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="app">
-    <h1>🌍 FlagMaster Arena</h1>
-
+    <h1>🌍 FlagMaster Arena PRO</h1>
     <div id="start-screen">
-      <input type="text" id="username" placeholder="Entre ton pseudo" />
+      <input type="text" id="username" placeholder="Ton pseudo" />
       <button onclick="startGame()">Jouer</button>
     </div>
-
-    <div id="game-screen" style="display: none;">
+    <div id="game-screen" style="display:none;">
       <p>Joueur : <span id="player-name"></span></p>
-      <img id="flag-img" src="" alt="Drapeau du pays" />
+      <div id="flag-container">
+        <img id="flag-img" src="" alt="Drapeau" />
+      </div>
       <div id="choices"></div>
       <p id="feedback"></p>
       <p id="stats">
@@ -25,14 +25,13 @@
         Découverts : <span id="discovered">0</span> |
         Grade : <span id="grade">-</span>
       </p>
+      <button onclick="endSession()">Terminer la session</button>
     </div>
-
     <div id="leaderboard">
       <h2>🏅 Classement local</h2>
       <ul id="leaderboard-list"></ul>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
